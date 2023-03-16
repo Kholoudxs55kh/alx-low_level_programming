@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <unistd.h>
 /**
-* Main - Entry Point Of the program
-* using Write Func.
-* return 1
+ * Main - Entry Point Of the program
+ * using Write Func.
+ * return 1
 */
 int main(void)
 {
