@@ -4,7 +4,7 @@
 /**
  * Main - Entry point
  * using Write Func.
- * return 1
+ * return: 1
 */
 
 int main(void)
