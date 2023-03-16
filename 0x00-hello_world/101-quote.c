@@ -2,7 +2,7 @@
 #include <unistd.h>
 
 /**
- * Main - Entry Point Of the program
+ * Main - Entry Point 
  * using Write Func.
  * return 1
 */
