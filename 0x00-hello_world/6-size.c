@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - Entry Point
- * Size Of various types of Data
+ * Print Size Of various types of Data
  * Return :0
  */
 int main(void)
