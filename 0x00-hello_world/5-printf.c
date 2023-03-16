@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * Using Printf
- * Ignoring Puts func
- * should return 0   
+ * Using - Printf
+ *
+ * return : 0   
  */
 
 int main(void)
