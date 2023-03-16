@@ -2,8 +2,8 @@
 
 
 /**
-* main Func.
- * Using puts 
+* main Entry
+ * Using - puts 
  * Return : 0
  */
 
