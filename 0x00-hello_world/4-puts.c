@@ -2,8 +2,8 @@
 
 
 /**
-* main Entry
- * Using - puts 
+* main - Entry Point
+ * Using puts 
  * Return : 0
  */
 
