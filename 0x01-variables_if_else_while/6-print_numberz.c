@@ -7,12 +7,12 @@
  */
 int main(void)
 {
-char Cukur = 'a';
-while (Cukur <= 'z')
+int C = 0;
+while (C < 10)
 {
-putchar(Cukur);
-Cukur++;
+putchar("%d", C);
+C++;
 }
-putchar('\n');
+putchar("\n");
 return (0);
 }

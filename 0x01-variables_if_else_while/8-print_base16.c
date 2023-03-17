@@ -7,17 +7,17 @@
  */
 int main(void)
 {
-char Cukur = 'a';
-while (Cukur <= 'z')
+int C = 0;
+while (C < 10)
 {
-putchar(Cukur);
-Cukur++;
+putchar(C);
+C++;
 }
-char Yamac = 'A';
-while (Yamac <= 'Z')
+char M = 'a';
+while (M <= 'f')
 {
-putchar(Yamac);
-Yamac++;
+putchar(M);
+M++;
 }
 putchar('\n');
 return (0);
