@@ -10,10 +10,10 @@ int k = 0;
 while (k < 9)
 {
 putchar(k + '0');
-if(k ==9)
-break;
 putchar(',');
 putchar(' ');
+if (k == 9)
+break;
 k++;
 }
 putchar('\n');
