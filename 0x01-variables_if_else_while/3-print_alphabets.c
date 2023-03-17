@@ -17,7 +17,7 @@ while (Cukur <= 'Z')
 {
 putchar(Cukur);
 Cukur++;
-}	
+}
 putchar('\n');
 return (0);
 }
