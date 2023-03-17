@@ -12,7 +12,7 @@ int main(void)
 	putchar(Cukur);
 	Cukur++;
 	};
-	char Cukur = 'A';
+	Cukur = 'A';
 	while (Cukur <= 'Z')
 	{
 	putchar(Cukur);
