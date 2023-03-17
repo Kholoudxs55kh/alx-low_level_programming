@@ -11,7 +11,7 @@ int main(void)
 	{
 	putchar(Cukur);
 	Cukur++;
-	}
+	};
 	char Yamac = 'A';
 	while (Yamac <= 'Z')
 	{
