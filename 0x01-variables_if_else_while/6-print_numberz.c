@@ -10,9 +10,9 @@ int main(void)
 int k = 0;
 while (k < 10)
 {
-putchar("%d", k);
+putchar(k);
 k++;
 }
-putchar("\n");
+putchar('\n');
 return (0);
 }
