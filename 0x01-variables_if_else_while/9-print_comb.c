@@ -12,9 +12,9 @@ while (k < 9)
 putchar(k + '0');
 putchar(',');
 putchar(' ');
-if (k == 9)
-continue;
 k++;
+if (k == 9)
+break;
 }
 putchar('\n');
 return (0);
