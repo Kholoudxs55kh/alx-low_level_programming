@@ -13,6 +13,12 @@ while (Cukur <= 'z')
 putchar(a);
 Cukur++;
 }
+char Yamac = 'A';
+while (Yamac <= 'Z')
+{
+putchar(a);
+Yamac++;
+}
 putchar('\n');
 return (0);
 }
