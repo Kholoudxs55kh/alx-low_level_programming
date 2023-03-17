@@ -7,26 +7,26 @@
  */
 int main(void)
 {
-int k, h;
-k = 48;
-h = 48;
-while (k < 58)
+int k, f;
+for (k = 48; i < 58; i++)
 {
-h = 48;
-while (h < 58)
+for (f = k; f < 58; f++)
 {
-if (k != h && h < k)
+if (k == f)
 {
+continue;
+}
 putchar(k);
-putchar(h);
-if (k == 57 && h == 56)
-break;
+putchar(f);
+if (k == 56 && f == 57)
+{break;
+}
+else
+{
 putchar(',');
 putchar(' ');
 }
-k++;
 }
-h++;
 }
 putchar('\n');
 return (0);
