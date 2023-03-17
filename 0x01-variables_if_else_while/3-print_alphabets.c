@@ -12,11 +12,11 @@ int main(void)
 	putchar(Cukur);
 	Cukur++;
 	};
-	char Yamac = 'A';
-	while (Yamac <= 'Z')
+	char Cukur = 'A';
+	while (Cukur <= 'Z')
 	{
-	putchar(Yamac);
-	Yamac++;
+	putchar(Cukur);
+	Cukur++;
 	}	
 	putchar('\n');
 	return (0);
