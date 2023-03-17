@@ -13,11 +13,11 @@ while (C < 10)
 putchar(C);
 C++;
 }
-char M = 'a';
-while (M <= 'f')
+C = 'a';
+while (C <= 'f')
 {
-putchar(M);
-M++;
+putchar(C);
+C++;
 }
 putchar('\n');
 return (0);
