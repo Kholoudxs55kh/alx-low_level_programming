@@ -7,11 +7,11 @@
  */
 int main(void)
 {
-int C = 0;
-while (C < 10)
+int k = 0;
+while (k < 10)
 {
-putchar("%d", C);
-C++;
+putchar("%d", k);
+k++;
 }
 putchar("\n");
 return (0);
