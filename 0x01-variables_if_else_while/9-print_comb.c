@@ -13,7 +13,7 @@ putchar(k + '0');
 putchar(',');
 putchar(' ');
 if (k == 9)
-break;
+continue;
 k++;
 }
 putchar('\n');
