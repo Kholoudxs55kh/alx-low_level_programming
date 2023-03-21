@@ -6,22 +6,42 @@
  */
 void times_table(void)
 {
-	int a, b, sum;
-	while (a <= 9)
-	{
-		_putchar(48);
-		while (b <= 9)
-		{
-			sum = a * b;
-			_putchar(44);
-			_putchar(32);
-			if ( sum <= 9)
-			{
-			_putchar(32);
-			_putchar(sum + '0');
-			}
-			a++;
-		}
-		b++;
-	}
+int a;
+int b;
+int sum;
+for (a = 0; a <= 9; a++)
+{
+for (b = 0; b <= 9; b++)
+{
+sum = a * b;
+if ((sum / 10) == 0)
+{
+if (b == 0)
+{
+_putchar ('0');
+}
+if (b != 0)
+{
+_putchar (' ');
+_putchar ((sum % 10) + '0');
+}
+if (b < 9)
+{
+_putchar(',');
+_putchar (' ');
+}
+}
+else
+{
+_putchar ((sum / 10) + '0');
+_putchar ((sum % 10) + '0');
+if (b < 9)
+{
+_putchar(',');
+_putchar (' ');
+}
+}
+}
+_putchar ('\n');
+}
 }
