@@ -16,6 +16,6 @@ _putchar(a);
 a++;
 _putchar('\n');
 }
-Times++
+Times++;
 }
 }
