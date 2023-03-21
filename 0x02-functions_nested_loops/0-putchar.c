@@ -6,7 +6,8 @@
  */
 int _putchar(char c)
 {
-	_putchar('_');
+	char c = 95;
+	_putchar(c);
 	_putchar('p');
 	_putchar('u');
 	_putchar('t');
