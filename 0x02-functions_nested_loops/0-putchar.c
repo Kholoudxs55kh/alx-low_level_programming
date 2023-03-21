@@ -7,7 +7,7 @@
 int _putchar(char c)
 {
 	int c = 95;
-	_putchar(c);
+	_putchar(char c);
 	_putchar('p');
 	_putchar('u');
 	_putchar('t');
