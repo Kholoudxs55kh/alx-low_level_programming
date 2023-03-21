@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_alphabet - Entry Point
+ * print_alphabet_x10 - Entry Point
  *
  * Return: 0
  */
@@ -16,7 +16,8 @@ while (a <= 'z')
 _putchar(a);
 a++;
 }
+_putchar('\n');
+
 Times++;
 }
-_putchar('\n');
 }
