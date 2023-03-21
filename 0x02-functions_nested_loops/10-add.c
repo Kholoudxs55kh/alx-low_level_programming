@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * add - prints the result of adding to integers
  *@k: checks int
