@@ -6,15 +6,15 @@
  */
 int main(void)
 {
-double Repeat, First = 1, Second = 2, Sum = 0;
-for (Repeat = 0 ; Repeat < 97 ; Repeat++)
+unsigned long int Repeat, First = 1, Second = 2, Sum = 0;
+for (Repeat = 0 ; Repeat < 90 ; Repeat++)
 {
-printf("%.lf, ", First);
+printf("%lu, ", First);
 Sum = First + Second;
 First = Second;
 Second = Sum;
-if (Repeat == 96)
-printf("%.lf\n", First);
+if (Repeat == 89)
+printf("%lu\n", First);
 }
 return (0);
 }
