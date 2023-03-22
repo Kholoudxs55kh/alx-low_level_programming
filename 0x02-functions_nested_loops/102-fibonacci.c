@@ -14,7 +14,7 @@ Sum = First + Second;
 First = Second;
 Second = Sum;
 if (Repeat == 48)
-printf("%ld\n", Second);
+printf("%ld\n", First);
 }
 return (0);
 }
