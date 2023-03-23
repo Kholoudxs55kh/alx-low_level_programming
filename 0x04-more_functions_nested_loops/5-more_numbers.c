@@ -6,18 +6,22 @@
  */
 void more_numbers(void)
 {
-int k = 0;
-int Repeat = 0;
+int Repeat = 1;
+int k, digits, ten;
 
 while (Repeat <= 10)
 {
-while (k < 15)
+for (k = 0; k <= 14; k++)
 {
-_putchar(k + '0');
-	k++;
-}
-_putchar('\n');
-}
-_putchar('\n');
-}
+ten = k / 10;
+digits = k % 10;
 
+if (k > 9)
+_putchar(ten + '0');
+
+_putchar(digits + '0');
+}
+Repeat++;
+_putchar('\n');
+}
+}
