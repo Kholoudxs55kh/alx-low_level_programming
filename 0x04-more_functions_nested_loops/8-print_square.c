@@ -25,7 +25,6 @@ int k, lines;
 				_putchar('#');
 				}
 			}
-			_putchar('#');
 			_putchar('\n');
 		}
 	}
