@@ -14,6 +14,4 @@ void print_numbers(void)
 		k++;
 	}
 	_putchar('\n');
-
-	return (0);
 }
