@@ -18,11 +18,11 @@ int k, lines;
 	{
 		for (k = 1; k <= size; k++)
 		{
-				for (lines = 1; lines <= size ; lines++)
-				{
-				_putchar('#');
-				}
-			_putchar('\n');
+		for (lines = 1; lines <= size ; lines++)
+		{
+		_putchar('#');
+		}
+		_putchar('\n');
 		}
 	}
 }
