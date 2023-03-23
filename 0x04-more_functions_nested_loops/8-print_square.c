@@ -22,7 +22,7 @@ int k, lines;
 			{
 				for (lines = 1; lines <= k - 1; lines++)
 				{
-				_putchar(' ');
+				_putchar('#');
 				}
 			}
 			_putchar('#');
