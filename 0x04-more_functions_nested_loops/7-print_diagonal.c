@@ -8,22 +8,25 @@
  */
 void print_diagonal(int n)
 {
-	int m, k;
+int row, num_lines;
 
-if (n <= 0)
-{
-putchar('\n');
-}
-else
-{
-for (m = 1; m <= n; m++)
-{
-for (k = 1; k <= m - 1; k++)
-{
-putchar(' ');
-}
-putchar('\\');
-putchar('\n');
-}
-}
+	if (n <= 0)
+	{
+		_putchar('\n');
+	}
+	else
+	{
+		for (k = 1; k <= n; k++)
+		{
+			if (k > 1)
+			{
+				for (lines = 1; lines <= k - 1; lines++)
+				{
+				_putchar(' ');
+				}
+			}
+			_putchar('\\');
+			_putchar('\n');
+		}
+	}
 }
