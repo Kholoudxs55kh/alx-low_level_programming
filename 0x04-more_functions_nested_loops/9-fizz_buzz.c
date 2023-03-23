@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	int n;
+	int n, ten, digits;
 
 	for (n = 1; n <= 100; n++)
 	{
@@ -40,8 +40,13 @@ int main(void)
 		}
 		else
 		{
-			_putchar(n + '0');
+			ten = n / 10;
+			digits = n % 10;
+			if (n > 9)
+			_putchar(ten + '0');
+
+			_putchar(digits + '0');
 			_putchar(' ');
+}
 		}
 	}
-}
