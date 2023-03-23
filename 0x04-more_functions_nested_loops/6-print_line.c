@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * print_line - prints a line according to n's value
+ *print_line - prints a line according to n's value
  *
- * @n: the value
+ *@n: gets the value
  *
- * Return: 0
+ *Return: 0
  */
 void print_line(int n)
 {
