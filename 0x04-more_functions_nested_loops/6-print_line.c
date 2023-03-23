@@ -18,7 +18,7 @@ else
 for (k = 1; k <= n ; k++)
 {
 _putchar('_');
+}
+}
 _putchar('\n');
-}
-}
 }
