@@ -18,13 +18,10 @@ int k, lines;
 	{
 		for (k = 1; k <= size; k++)
 		{
-			if (k > 1)
-			{
-				for (lines = 1; lines <= k - 1; lines++)
+				for (lines = 1; lines <= size ; lines++)
 				{
 				_putchar('#');
 				}
-			}
 			_putchar('\n');
 		}
 	}
