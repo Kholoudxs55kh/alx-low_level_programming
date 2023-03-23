@@ -8,20 +8,21 @@
  */
 void print_diagonal(int n)
 {
-		int num_lines;
+	int m, k;
 
 	if (n <= 0)
 	{
-		_putchar('\\');
-		_putchar('\n');
+	_putchar('\n');
 	}
 	else
 	{
-				for (num_lines = 1; num_lines <= row - 1; num_lines++)
-				{
-				_putchar(' ');
-				}
-			}
-			_putchar('\\');
-			_putchar('\n');
+		for (m = 1 , m <= n; m++)
+		{
+		for (k = 1; k <= m - 1; k++)
+		{
+		_putchar(' ');
+		}
+		_putchar('\\');
+		_putchar('\n');
+	}
 }
