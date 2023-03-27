@@ -12,7 +12,7 @@ void print_rev(char *s)
 
 	while (k >= 0)
 	{
-	if (s[count] == '\0')
+	if (s[k] == '\0')
 		break;
 	k++;
 	}
