@@ -11,16 +11,17 @@ char *_strcat(char *dest, char *src)
 {
 	int k = 0, m;
 
-	while (*(dest + k) != '\0')
+	if (*(dest + k) != '\0')
+	{
 		k++;
+	}
 	for (m = 0; *(src + m) != '\0'; m++)
 	{
 		while (*(dest + k) == *(src + m))
 		{
-			if (*(dest + k) == '\0)
+			if (*(src + m) == '\0)
 				break;
 		k++;
-		m++;
 }
 return (dest);
 }
