@@ -9,6 +9,7 @@
  * @src: contains one of them
  * @n: contains the bytes of src
  *
+ * Return: dest
  */
 char *_strncat(char *dest, char *src, int n)
 {
