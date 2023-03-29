@@ -18,6 +18,7 @@ for (k = 0; *(dest + k) != '\0'; k++)
 		*(dest + k) = *(src + M);
 		M++;
 	}
+	k++;
 }
 return (dest);
 }
