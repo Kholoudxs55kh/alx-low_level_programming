@@ -20,7 +20,7 @@ char *cap_string(char *k)
 	}
 	while (k[h] != '\0')
 	{
-		for (s = 0; s < 13; s++)
+		for (s = 0; s < 15; s++)
 		{
 			if (k[h] == sep[s])
 			{
