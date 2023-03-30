@@ -5,13 +5,13 @@
  * @a: the array
  * @n: the number of elements
  *
- * Return: 0
+ * Return: void
  */
 void reverse_array(int *a, int n)
 {
 	int k = 0, h = 0;
-	n = n - 1;
 
+	n = n - 1;
 	while (k <= n)
 	{
 		h = a[k];
@@ -19,4 +19,3 @@ void reverse_array(int *a, int n)
 		a[n--] = h;
 	}
 }
-
