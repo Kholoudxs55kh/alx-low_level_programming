@@ -18,15 +18,21 @@ char *cap_string(char *k)
 	{
 		k[h] = k[h] - 32;
 	}
-	for (s = 0; sep[s] >= 0; s++)
+	while (k[h] != '\0')
 	{
+		for (s = 0; s < 13; s++)
+		{
+			if (k[h] == sep[s])
+			{
 		if (k[h + 1] >= 97 && k[h + 1] <= 122)
 		{
 			k[h + 1] = k[h + 1] - 32;
 		}
+		break;
 	}
+		}
 	h++;
+	}
 	}
 	return (k);
 }
-
