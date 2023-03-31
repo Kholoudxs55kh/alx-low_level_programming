@@ -14,7 +14,7 @@ char *rot13(char *k)
 
 	while (k[h] != '\0')
 	{
-		for (m = 0; m < 5; m++)
+		for (m = 0; m < 70; m++)
 		{
 			if (k[h] == a[m])
 			{
