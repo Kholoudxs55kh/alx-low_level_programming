@@ -2,10 +2,10 @@
 /**
  * _strpbrk - searches a string for any of a set of bytes
  *
- * @s:
- * @accept:
+ * @s: contains a string
+ * @accept: contains a string
  *
- * Return: s or the bytes that matches 
+ * Return: s or the bytes that matches
  */
 char *_strpbrk(char *s, char *accept)
 {
