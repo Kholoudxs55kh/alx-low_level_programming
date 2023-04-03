@@ -16,7 +16,7 @@ while (*haystack != '\0' && *needle != '\0' && *needle == *haystack)
 haystack++;
 needle++;
 }
-if (*needle == '\0')
+if (!*needle)
 {
 return (haystack);
 }
