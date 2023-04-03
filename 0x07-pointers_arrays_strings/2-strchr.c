@@ -5,7 +5,7 @@
  * @s: contains the string
  * @c: the first occurrence of the character
  *
- * Return: s
+ * Return: s or NULL
  */
 char *_strchr(char *s, char c)
 {
@@ -17,5 +17,5 @@ char *_strchr(char *s, char c)
 			return (s);
 		}
 	}
-	return ('\0');
+	return (NUll);
 }
