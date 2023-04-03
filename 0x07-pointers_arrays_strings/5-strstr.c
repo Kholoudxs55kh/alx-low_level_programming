@@ -9,8 +9,11 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
+	char* st;
+
 while (*haystack != '\0')
 {
+	st = haystack;
 while (*haystack != '\0' && *needle != '\0' && *needle == *haystack)
 {
 haystack++;
@@ -20,7 +23,7 @@ if (*needle == '\0')
 {
 return (haystack);
 }
-haystack += 1;
+haystack = st + 1;
 }
 return (0);
 }
