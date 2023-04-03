@@ -9,7 +9,7 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	int k, h;
+	unsigned int k, h, count;
 	/*
 	 * s[k]
 	 * accept[h]
@@ -18,14 +18,25 @@ unsigned int _strspn(char *s, char *accept)
 
 	for (k = 0; s[k] != '\0'; k++)
 	{
+		count = 1;
 		for (h = 0; accept[h] != '\0'; h++)
 		{
 		if (s[k] == accept[h])
-			return (k);
-
-		if (s[k] != accept[h])
+		{
+			count = 0;
 			break;
-		}
+			/*
+			 * return (k);
+			 *
+*
+		*if (s[k] != accept[h])
+			*break;
+		*}
+		*/
+	}
+	if (count == 1) 
+		break;
+	}
 	}
 	return (k);
 }
