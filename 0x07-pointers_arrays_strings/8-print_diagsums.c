@@ -9,24 +9,24 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int k, total;
+	int k, nateg;
 
 	k = 0;
-	total = 0;
+	nateg = 0;
 	while (k < size)
 	{
-		total = total + *(a + k);
+		nateg = nateg + *(a + k);
 		a = a + size;
 		k++;
 	}
-	printf("%d, ", total);
+	printf("%d, ", nateg);
 
-	total = 0;
+	nateg = 0;
 	k = 0;
 	a = a - size;
 	while (k < size)
 	{
-		total = total + *(a + k);
+		nateg = nateg + *(a + k);
 		a = a - size;
 		k++;
 	}
