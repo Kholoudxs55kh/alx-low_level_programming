@@ -1,29 +1,34 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_diagsums -  prints the sum of the two diagonals of a square matrix of integers
+ * print_diagsums -  prints the sum of the
+ * two diagonals of a square matrix of integers
  * @a: contains the ay7aga
  * @size: size
  * Return: void
  */
 void print_diagsums(int *a, int size)
 {
-	int k, nateg = 0;
+	int k, total;
 
-	for(k = 0; k < size; k++)
+	k = 0;
+	total = 0;
+	while (k < size)
 	{
-		nateg += a[k];
-		a+= size;
+		total = total + *(a + k);
+		a = a + size;
+		k++;
 	}
+	printf("%d, ", total);
 
-	printf("%d, ", nateg);
-
-	a -= size;
-
-	for (k = 0; k < size; k++)
+	total = 0;
+	k = 0;
+	a = a - size;
+	while (k < size)
 	{
-		nateg += a[k];
-		a -= size;
+		total = total + *(a + k);
+		a = a - size;
+		k++;
 	}
 	printf("%d\n", nateg);
 }
