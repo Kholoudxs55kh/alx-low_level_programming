@@ -6,11 +6,23 @@
  */
 void _puts_recursion(char *s)
 {
-	int k;
+/**
+* int k;
+*
+*	for (k = 0; s[k] != '\0'; k++)
+*	{
+*		_putchar(*(s + k));
+*	}
+*	_putchar('\n');
+*
+*LOOPS ARE NOT ALLOWED
+*/
 
-	for (k = 0; s[k] != '\0'; k++)
+	if (*s == '\0')
 	{
-		_putchar(*(s + k));
+		_putchar('\n');
+		return;
 	}
-	_putchar('\n');
+	_putchar(*s);
+	_puts_recursion(s + 1);
 }
