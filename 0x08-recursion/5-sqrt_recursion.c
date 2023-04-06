@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _sqrt_recursion -  returns the natural square root of a number
+ * pre_sqrt_recursion - have the 3mlya 7sabya
  * @n: the number
  * @k: the natural square of the number
  * Return: k
@@ -19,6 +19,11 @@ int pre_sqrt_recursion(int n, int k)
 		return (0 + pre_sqrt_recursion(n, k + 1));
 }
 
+/**
+ * _sqrt_recursion -  returns the natural square root of a number
+ * @n: the num
+ * Return: natural number
+ */
 int _sqrt_recursion(int n)
 {
 		return (pre_sqrt_recursion(n, 1));
