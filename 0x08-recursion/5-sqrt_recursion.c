@@ -11,7 +11,7 @@ int pre_sqrt_recursion(int n, int k)
 
 		return (k);
 
-	else if ( k * k >  n)
+	else if (k * k > n)
 
 		return (-1);
 
@@ -21,5 +21,5 @@ int pre_sqrt_recursion(int n, int k)
 
 int _sqrt_recursion(int n)
 {
-		return(pre_sqrt_recursion(n, 1));
+		return (pre_sqrt_recursion(n, 1));
 }
