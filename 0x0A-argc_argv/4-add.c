@@ -13,11 +13,12 @@ int main(int argc, char *argv[])
 
 	for (k = 1; k < argc; k++)
 	{
-		if (!isdigit(*argv[k]))
+		if (!isdigit(*argv[k]) && *argv[k] != '-')
 	{
 		printf("Error\n");
 			return (1);
 	}
+		if (atoi(argv[k] > 0)
 	nateg = nateg + atoi(argv[k]);
 	}
 	printf("%d\n", nateg);
