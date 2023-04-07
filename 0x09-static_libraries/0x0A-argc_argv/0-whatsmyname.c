@@ -6,7 +6,7 @@
  * @argv: considered as the value
  * Return: 0
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	int num = 0;
 
