@@ -20,8 +20,8 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 			return (1);
 	}
-	nateg = nateg + atoi(argv[k]);
-	}
+		}
+	nateg += atoi(argv[k]);
 	}
 	printf("%d\n", nateg);
 
