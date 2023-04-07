@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	{
 		for (dig = 0; argv[k][dig] != '\0'; dig++)
 		{
-		if (!isdigit(*argv[k]) && *argv[k] != '-')
+		if (!isdigit(*argv[k][dig]) && *argv[k] != '-')
 	{
 		printf("Error\n");
 			return (1);
