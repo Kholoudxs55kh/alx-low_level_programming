@@ -9,17 +9,21 @@
  */
 int main(int argc, char *argv[])
 {
-	int nateg = 0, k;
+	int nateg = 0, k, dig;
 
 	for (k = 1; k < argc; k++)
 	{
-		if (!isdigit(*argv[k]) && *argv[k] != '-')
+		for (dig = 0; argv[num][dig]; dig++)
+		{
+		if (!isdigit(*argv[k]) && *argv[k] != '-'
+				&& *argv[k] <  0)
 	{
 		printf("Error\n");
 			return (1);
 	}
 if (atoi(argv[k]) > 0)
 nateg = nateg + atoi(argv[k]);
+	}
 	}
 	printf("%d\n", nateg);
 
