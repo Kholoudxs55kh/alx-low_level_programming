@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 			return (1);
 	}
-		if (atoi(argv[k] > 0)
+		if (atoi(argv[k]) > 0)
 	nateg = nateg + atoi(argv[k]);
 	}
 	printf("%d\n", nateg);
