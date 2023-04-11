@@ -8,7 +8,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int k, coin = 0;
+	int k, output = 0;
 
 	if (argc != 2)
 	{
