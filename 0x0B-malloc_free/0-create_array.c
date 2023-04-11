@@ -11,10 +11,7 @@ char *create_array(unsigned int size, char c)
 	unsigned int k;
 	char *kh = (char *)malloc(size);
 
-	if (size == 0)
-		return (NULL);
-
-	if (kh == NULL)
+	if (size == 0 || kh == NULL)
 		return (NULL);
 
 	for (k = 0; k < size; k++)
