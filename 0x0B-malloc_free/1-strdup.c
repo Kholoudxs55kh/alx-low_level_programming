@@ -10,14 +10,18 @@
 char *_strdup(char *str)
 {
 	int k = 0, h = 0;
-	char *cstr = (char *)malloc(strlen(str) + 1);
+	char *cstr;
 
-	if (str == NULL || cstr == NULL)
+	if (str == NULL)
+		return (NULL);
+
+	cstr = (char *)malloc(strlen(str) + 1);
+
+	if (cstr == NULL)
 		return (NULL);
 
 	for (; str[k] != '\0'; k++)
 	{
-
 		while (h <= k)
 		{
 			cstr[h] = str[k];
