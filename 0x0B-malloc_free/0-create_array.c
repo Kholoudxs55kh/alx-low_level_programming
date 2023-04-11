@@ -4,7 +4,7 @@
  * create_array - contains the programm
  * @size: the size of array
  * @c: the array
- * Return: 0
+ * Return: pointer (kh).
  */
 char *create_array(unsigned int size, char c)
 {
