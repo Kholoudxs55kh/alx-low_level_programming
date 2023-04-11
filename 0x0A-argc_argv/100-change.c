@@ -2,7 +2,7 @@
 #include <stdlib.h>
 /**
  * main - contains the program
- * @argc: may be the index
+ * @argc: msln the index
  * @argv: consideres as the value
  * Return: 0
  */
