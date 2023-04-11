@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 			k -= 2;
 		else if (k >= 1)
 			k -= 1;
-			output = output + 1;
+	output += 1;
 	}
 	printf("%d\n", output);
 	return (0);
