@@ -2,10 +2,11 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * string_nconcat - concatenates two strings
+ * string_nconcat - contains the func
  * @s1: first str
  * @s2: second str
  * @n: lenght od st2
+ * Return: manythings
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
