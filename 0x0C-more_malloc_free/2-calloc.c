@@ -9,7 +9,8 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *str; /* using void to be filled with any DT*/
+	char *str;
+	unsigned int k = 0;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
@@ -19,5 +20,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (str == NULL)
 		return (NULL);
 
+	while (k < (nmemb * size))
+	{
+		str[k] = 0;
+		k++;
+	}
 	return (str);
 }
