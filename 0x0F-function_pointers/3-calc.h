@@ -1,10 +1,12 @@
 #ifndef _CALC_H_
 #define _CALC_H_
+
+int _putchar(char *c);
 /**
- * struct op - D'Structure
+ * struct op - Struct op
  *
- * @op: operator
- * @f: pointer to func
+ * @op: The operator
+ * @f: The function associated
  */
 typedef struct op
 {
