@@ -33,5 +33,5 @@ int main(int argc, char *argv[])
 
 	printf("%d\n", nateg(k, h));
 
-	return(0);
+	return (0);
 }
