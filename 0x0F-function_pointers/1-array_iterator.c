@@ -6,6 +6,7 @@
  * @array: the array
  * @size: the size of array
  * @action: the pointer to the func
+ * Return: void
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
