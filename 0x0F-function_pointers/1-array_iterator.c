@@ -2,10 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * array_iterator - executes a function given as a parameter on each element of an array
+ * array_iterator - executes a function given as a parameter on each element
  * @array: the array
  * @size: the size of array
- * @(*action)(int): the pointer to the func
+ * @action: the pointer to the func
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
