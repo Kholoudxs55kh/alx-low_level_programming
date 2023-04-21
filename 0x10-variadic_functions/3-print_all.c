@@ -13,11 +13,12 @@ void print_all(const char * const format, ...)
 	char *sep;
 
 	va_list args;
+
 	va_start(args, format);
 
 		sep = ", ";
 		x = 0;
-		while (format[x] != '\0')
+		while ((format != NULL) && (format[x] != '\0'))
 		{
 			if (format[x + 1] == '\0')
 				sep = "";
