@@ -37,7 +37,7 @@ void print_all(const char * const format, ...)
 			str = va_arg(args, char *);
 					if (str == NULL)
 					{
-					printf("(nil)%s" , sep);
+					printf("(nil)%s", sep);
 						break;
 					}
 					 printf("%s%s", str, sep);
