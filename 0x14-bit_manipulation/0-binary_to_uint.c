@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _powering - returns the value of x raised to the power of y
+ * _pow - returns the value of x raised to the power of y
  * @x: the value
  * @y: the value bardu
  * Return: the method to power a num
@@ -31,7 +31,7 @@ unsigned int binary_to_uint(const char *b)
 
 	len = strlen(b);
 
-	while(b[x])
+	while (b[x])
 	{
 		if (b[x] > '1' || b[x] < '0')
 			return (0);
