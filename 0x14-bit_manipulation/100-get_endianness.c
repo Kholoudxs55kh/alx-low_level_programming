@@ -5,5 +5,13 @@
  */
 int get_endianness(void)
 {
-return (0);
+	int n = 1;
+	char *LoR;
+
+	LoR = (char *)&n;
+
+	if (LoR[0] == 1)
+		return (1);
+
+	return (0);
 }
