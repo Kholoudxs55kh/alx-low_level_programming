@@ -23,12 +23,12 @@ int main(int argc, char *argv[])
 	{
 		if ((!fd1) || (!buf))
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s \n", file_from);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 			exit(98);
 		}
 		if ((!fd2) || (!buff))
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s \n", file_to);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 			exit(99);
 		}
 	}
