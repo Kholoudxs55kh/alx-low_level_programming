@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
         dprintf(STDERR_FILENO, "Error: Can't write to %s \n", file_to);
         exit(99);
     }
-    while (buf == 1024)
+    while (buf)
     {
         buf = read(fd1, buffer, 1024);
         (!buf)? /*code*/;
