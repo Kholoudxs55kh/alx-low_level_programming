@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	buff = write(fd2, buffer, buf);
 	while (buf)
 	{
-		if ((fd1 == -1) || (buf == -1)
+		if ((fd1 == -1) || (buf == -1))
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);	
 			close(fd1);
