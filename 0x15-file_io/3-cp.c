@@ -19,6 +19,8 @@ int main(int argc, char *argv[])
     fd2 = open(file_to, O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
     buf = read(fd1, buffer, 1024);
     buff = write(fd2, buffer, buf);
+    while (buf)
+    {
     if ((!fd1) || (!buf))
     {
         dprintf(STDERR_FILENO, "Error: Can't read from file %s \n", file_from);
@@ -28,6 +30,7 @@ int main(int argc, char *argv[])
     {
         dprintf(STDERR_FILENO, "Error: Can't write to %s \n", file_to);
         exit(99);
+    }
     }
     if (!(close(fd1)))
     {
