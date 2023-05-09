@@ -21,10 +21,11 @@ if (text_content)
 {
 	x = write(file, text_content, strlen(text_content));
 
-	if (!x)
+	if (x == -1)
 		return (-1);
 }
 	close(file);
+
 	return (1);
 
 }
