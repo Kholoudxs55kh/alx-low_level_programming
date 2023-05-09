@@ -7,7 +7,7 @@
  */
 int main(int argc, char *argv[])
 {
-    int fd1, fd2, cls, clss, buf = 1024, buff;
+    int fd1, fd2, cls = close(fd1), clss = close(fd2), buf = 1024, buff;
     char *file_from = argv[1], *file_to = argv[2], buffer[1024];
 
     if (argc != 3)
@@ -30,12 +30,18 @@ int main(int argc, char *argv[])
     while (buf)
     {
         buf = read(fd1, buffer, 1024);
-        (!buf)? /*code*/;
+        if (!buf)
+        {
+            dprintf(STDERR_FILENO, "Error: Can't read from file %s \n", file_from);
+            exit(98);
+        }
         buff = write(fd2, buffer, buf);
-        (!buff)? /*code*/;
+        if (!buff)
+        {
+            dprintf(STDERR_FILENO, "Error: Can't write to %s \n", file_to);
+            exit(99);
+        }
     }
-    cls = close(fd1);
-    clss = close(fd2);
     if (!cls)
     {
         dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
