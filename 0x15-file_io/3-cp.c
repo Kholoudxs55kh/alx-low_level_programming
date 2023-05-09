@@ -3,7 +3,7 @@
  * main - the program
  * @argc: the arguements
  * @argv: the inputs
- * Return: .
+ * Return: exit value or .
  */
 int main(int argc, char *argv[])
 {
