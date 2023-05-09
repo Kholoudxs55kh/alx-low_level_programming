@@ -21,25 +21,25 @@ int main(int argc, char *argv[])
 	buff = write(fd2, buffer, buf);
 	while (buf)
 	{
-		if ((!fd1) || (!buf))
+		if ((fd1 == -1) || (!buf))
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);	
 			close(fd1);
 			exit(98);
 		}
-		if ((!fd2) || (buff == -1))
+		if ((fd2 == -1) || (buff == -1))
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 			close(fd2);
 			exit(99);
 		}
 	}
-	if (!(close(fd1)))
+	if ((close(fd1)) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
 		exit(100);
 	}
-	if (!(close(fd2)))
+	if ((close(fd2)) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
 		exit(100);
