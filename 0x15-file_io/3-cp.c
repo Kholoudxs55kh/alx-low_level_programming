@@ -26,24 +26,23 @@ int main(int argc, char *argv[])
         if ((fd1 == -1) || (buf == -1))
         {
             dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
-            if ((close(fd1)) == -1)
-            {
-                dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
-                exit(100);
-            }
             exit(98);
         }
         if ((fd2 == -1) || (buff == -1))
         {
             dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
-            if ((close(fd2)) == -1)
+            exit(99);
+        }
+    }
+            if ((close(fd1)) == -1)
+            {
+                dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
+                exit(100);
+            }
+                if ((close(fd2)) == -1)
             {
                 dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
                 exit(100);
             }
-            exit(99);
-        }
-    }
-
     return (0);
 }
