@@ -23,12 +23,14 @@ int main(int argc, char *argv[])
 	{
 		if ((!fd1) || (!buf))
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);	
+			close(fd1);
 			exit(98);
 		}
 		if ((!fd2) || (!buff))
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
+			close(fd2);
 			exit(99);
 		}
 	}
@@ -42,7 +44,5 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
 		exit(100);
 	}
-	close(fd1);
-	close(fd2);
 	return (0);
 }
