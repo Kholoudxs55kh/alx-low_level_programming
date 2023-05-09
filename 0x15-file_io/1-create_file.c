@@ -20,7 +20,7 @@ int create_file(const char *filename, char *text_content)
 
 	x = write(file, text_content, strlen(text_content));
 
-	if ((x == -1) || (x == 0))
+	if ((x == -1))
 		return (-1);
 
 
