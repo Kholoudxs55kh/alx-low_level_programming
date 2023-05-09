@@ -7,7 +7,7 @@
  */
 int main(int argc, char *argv[])
 {
-    int fd1, fd2, cls, clss, buf = 1024, buf2;
+    int fd1, fd2, cls, clss, buf = 1024, buff;
     char *file_from = argv[1], *file_to = argv[2], buffer[1024];
 
     if (argc != 3)
@@ -30,7 +30,9 @@ int main(int argc, char *argv[])
     while (buf == 1024)
     {
         buf = read(fd1, buffer, 1024);
-        buf2 = write(fd2, buffer, buf);
+        (!buf)? /*code*/;
+        buff = write(fd2, buffer, buf);
+        (!buff)? /*code*/;
     }
     cls = close(fd1);
     clss = close(fd2);
