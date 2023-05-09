@@ -7,7 +7,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int fd1, fd2, buf, buff;
+	int fd1, fd2, buf;
 	char *file_from = argv[1], *file_to = argv[2], buffer[1024];
 
 	if (argc != 3)
@@ -18,7 +18,6 @@ int main(int argc, char *argv[])
 	fd1 = open(file_from, O_RDONLY);
 	fd2 = open(file_to, O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 	buf = read(fd1, buffer, 1024);
-	buff = write(fd2, buffer, buf);
 	while (buf)
 	{
 		if ((!fd1) || (!buf))
@@ -27,7 +26,7 @@ int main(int argc, char *argv[])
 			close(fd1);
 			exit(98);
 		}
-		if ((!fd2) || (!buff))
+		if ((!fd2) || (write(fd2, buffer, buf) == -1))
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 			close(fd2);
