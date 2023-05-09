@@ -7,7 +7,7 @@
  */
 int main(int argc, char *argv[])
 {
-    int fd1, fd2, buf = 1024, buff;
+    int fd1, fd2, buf, buff;
     char *file_from = argv[1], *file_to = argv[2], buffer[1024];
 
     if (argc != 3)
