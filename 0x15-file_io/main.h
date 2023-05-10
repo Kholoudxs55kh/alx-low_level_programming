@@ -16,11 +16,9 @@ int _putchar(char c);
 ssize_t read_textfile(const char *filename, size_t letters);
 int create_file(const char *filename, char *text_content);
 int append_text_to_file(const char *filename, char *text_content);
-<<<<<<< HEAD
-int egzit(int argc, int fd1, int fd2, int cls1, int cls2, char *argv[]);
-=======
-int egzit(int argc, int fd1, int fd2, int cls1, int cls2);
->>>>>>> 82767e788b4ba4dc03d593ea9c743fd5560e28dd
+int exit97(int argc);
+int FunName(int fd1, int fd2, char **argv);
+int insideif(int fd1, int fd2);
 int main(int argc, char *argv[]);
 
 #endif
