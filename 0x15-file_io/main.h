@@ -16,9 +16,9 @@ int _putchar(char c);
 ssize_t read_textfile(const char *filename, size_t letters);
 int create_file(const char *filename, char *text_content);
 int append_text_to_file(const char *filename, char *text_content);
+int exit97(int argc);
+int FunName(int fd1, int fd2, char **argv);
+int insideif(int fd1, int fd2);
 int main(int argc, char *argv[]);
-int egzit(int argc);
-int fd(int fd1, int fd2);
-int kloze(int cls1, int cls2);
 
 #endif
