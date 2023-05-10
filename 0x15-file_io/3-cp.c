@@ -78,28 +78,28 @@ int main(int argc, char *argv[])
 	file_from = argv[1];
 	file_to = argv[2];
 	fd1 = open(file_from, O_RDONLY);
-	FunName(0, 1, argv);
+	FunName(0, -1, argv);
 	fd2 = open(file_to, O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
-	FunName(1, 0, argv);
+	FunName(-1, 0, argv);
 	while ((buf = read(fd1, buffer, 1024)))
 	{
 
 		if ((buf == -1))
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
-			insideif(1, 0);
-			insideif(0, 1);
+			insideif(-1, 0);
+			insideif(0, -1);
 			exit(98);
 		}
 		if (buf != write(fd2, buffer, buf))
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
-			insideif(1, 0);
-			insideif(0, 1);
+			insideif(-1, 0);
+			insideif(0, -1);
 			exit(99);
 		}
 	}
-	insideif(1, 0);
-	insideif(0, 1);
+	insideif(-1, 0);
+	insideif(0, -1);
 	return (0);
 }
