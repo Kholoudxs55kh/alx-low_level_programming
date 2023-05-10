@@ -77,7 +77,7 @@ int main(int argc, char *argv[])
 	fd1 = open(file_from, O_RDONLY);
 	FunName(0, 1, argv);
 	fd2 = open(file_to, O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
-	intFunName(1, 0, argv);
+	FunName(1, 0, argv);
 
 	FunName(1, 1, argv);
 	while ((buf = read(fd1, buffer, 1024)))
