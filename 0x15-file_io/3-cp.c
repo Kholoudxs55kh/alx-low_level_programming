@@ -8,6 +8,7 @@
  * @cls2: .
  * @argv: .
  * Return: .
+<<<<<<< HEAD
  */
 int egzit(int argc, int fd1, int fd2, int cls1, int cls2, char *argv[])
 {
@@ -27,6 +28,7 @@ int egzit(int argc, int fd1, int fd2, int cls1, int cls2, char *argv[])
 		exit(99);
 	}
 	cls1 = (close(fd1) == -1);
+	}
 	if (cls1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
@@ -61,7 +63,7 @@ int main(int argc, char *argv[])
 		egzit(0, 1, 0, 0, 0, argv);
 	fd2 = open(file_to, O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 	if (fd2 == -1)
-		egzit(0, 0, 1, 0, 0, argv);
+	egzit(0, 0, 1, 0, 0, argv);
 	while ((buf = read(fd1, buffer, 1024)))
 	{
 		if ((buf == -1))
