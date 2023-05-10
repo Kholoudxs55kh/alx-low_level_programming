@@ -8,7 +8,7 @@
  * @es100: .
  * Return: .
 */
-int egzit(int argc, int fd1, int fd2, int cls1, int cls2, char *argv)
+int egzit(int argc, int fd1, int fd2, int cls1, int cls2, char *argv[])
 {
 	cls1 = (close(fd1) == -1);
 	cls2 = (close(fd2) == -1);
