@@ -32,7 +32,7 @@ void FunName(int fd1, int fd2, char **argv)
 		exit(98);
 	}
 
-	fd2 = open(file_to, O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0644);
+	fd2 = open(file_to, O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 	if (fd2 == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
