@@ -11,8 +11,6 @@
  */
 int egzit(int argc, int fd1, int fd2, int cls1, int cls2, char *argv[])
 {
-	cls1 = (close(fd1) == -1);
-	cls2 = (close(fd2) == -1);
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
@@ -20,19 +18,21 @@ int egzit(int argc, int fd1, int fd2, int cls1, int cls2, char *argv[])
 	}
 	if (fd1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", *argv);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	if (fd2)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", *argv);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
+	cls1 = (close(fd1) == -1);
 	if (cls1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
 		exit(100);
 	}
+	cls2 = (close(fd2) == -1);
 	if (cls2)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 	char *file_from, *file_to, buffer[1024];
 
 	(void)argc;
-	egzit(1, 0, 0, 0, 0, argv);
+	egzit(argc, 0, 0, 0, 0, argv);
 	file_from = argv[1];
 	file_to = argv[2];
 	fd1 = open(file_from, O_RDONLY);
