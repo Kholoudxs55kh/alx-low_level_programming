@@ -13,7 +13,7 @@
 	}
     return (0);    
  }
-//  description here
+
 int FunName(int fd1, int fd2, char **argv)
 {
     char *file_from, *file_to;
@@ -35,7 +35,7 @@ int FunName(int fd1, int fd2, char **argv)
 	}
     return (0);
 }
-// Description here
+
 int insideif(int fd1, int fd2)
 {
     		if (close(fd2) == -1)
@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
 	int fd1, fd2, buf;
 	char *file_from, *file_to, buffer[1024];
 
-	exit97(argc); //tmam
+	exit97(argc); 
 	file_from = argv[1];
 	file_to = argv[2];
 	fd1 = open(file_from, O_RDONLY); 
