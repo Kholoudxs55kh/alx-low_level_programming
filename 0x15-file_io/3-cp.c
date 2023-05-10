@@ -8,8 +8,17 @@
  * @es100: .
  * Return: .
 */
-int egzit(int e97, int e89, int e99, int ef100, int es100)
+int egzit(int argc, char *argv[], int e97, int e89, int e99, int ef100, int es100)
 {
+	int fd1, fd2;
+	char *file_from, *file_to, buffer[1024];
+	
+	file_from = argv[1];
+	file_to = argv[2];
+	fd1 = open(file_from, O_RDONLY);
+	fd2 = open(file_to, O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
+
+	
 	if (e97)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
@@ -49,15 +58,15 @@ int main(int argc, char *argv[])
 	char *file_from, *file_to, buffer[1024];
 
 	if (argc != 3)
-		egzit(1, 0, 0, 0, 0);
+		egzit(1, 1, 1, 0, 0, 0, 0);
 	file_from = argv[1];
 	file_to = argv[2];
 	fd1 = open(file_from, O_RDONLY);
 	if (fd1 == -1)
-		egzit(0, 1, 0, 0, 0);
+		egzit(1, 1, 0, 1, 0, 0, 0);
 	fd2 = open(file_to, O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 	if (fd2 == -1)
-	egzit(0, 0, 1, 0, 0);
+	egzit(1, 1, 0, 0, 1, 0, 0);
 
 	while ((buf = read(fd1, buffer, 1024)))
 	{
@@ -65,24 +74,24 @@ int main(int argc, char *argv[])
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 			if (close(fd2) == -1)
-				egzit(0, 0, 0, 0, 1);
+				egzit(1, 1, 0, 0, 0, 0, 1);
 			if (close(fd1) == -1)
-				egzit(0, 0, 0, 1, 0);
+				egzit(1, 1, 0, 0, 0, 1, 0);
 			exit(98);
 		}
 		if (buf != write(fd2, buffer, buf))
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 			if (close(fd2) == -1)
-				egzit(0, 0, 0, 0, 1);
+				egzit(1, 1, 0, 0, 0, 0, 1);
 			if (close(fd1) == -1)
-				egzit(0, 0, 0, 1, 0);
+				egzit(1, 1, 0, 0, 0, 1, 0);
 			exit(99);
 		}
 	}
 	if (close(fd2) == -1)
-		egzit(0, 0, 0, 0, 1);
+		egzit(1, 1, 0, 0, 0, 0, 1);
 	if (close(fd1) == -1)
-		egzit(0, 0, 0, 1, 0);
+		egzit(1, 1, 0, 0, 0, 1, 0);
 	return (0);
 }
