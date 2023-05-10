@@ -7,15 +7,14 @@
 */
 void _main(int argc, char **argv)
 {
-	int fd1, fd2, buf;
-	char *file_from, *file_to, buffer[1024];
+	int fd1, fd2;
+	char *file_from, *file_to;
 
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	/*remove*/
 	file_from = argv[1];
 	file_to = argv[2];
 
@@ -63,7 +62,11 @@ int main(int argc, char *argv[])
 	int fd1, fd2, buf;
 	char *file_from, *file_to, buffer[1024];
 
-	_main(argc, *argv);
+	_main(argc, argv);
+    file_from = argv[1];
+	file_to = argv[2];
+    fd1 = open(file_from, O_RDONLY);
+	fd2 = open(file_to, O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 	while ((buf = read(fd1, buffer, 1024)))
 	{
 
