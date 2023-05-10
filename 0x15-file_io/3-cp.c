@@ -1,30 +1,24 @@
 #include "main.h"
 /**
- * exit97 - .
- * @argc: .
- * Return: 0
- */
-void exit97(int argc)
+* _main - helper func
+*@argc: .
+*@argv: .
+*Return: .
+*/
+void _main(int argc, char **argv)
 {
+	int fd1, fd2, buf;
+	char *file_from, *file_to, buffer[1024];
+
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-}
-/**
- * FunName - .
- * @fd1: .
- * @fd2: .
- * @argv: .
- * Return: .
- */
-void FunName(int fd1, int fd2, char **argv)
-{
-	char *file_from, *file_to;
-
+	/*remove*/
 	file_from = argv[1];
 	file_to = argv[2];
+
 	fd1 = open(file_from, O_RDONLY);
 	if (fd1 == -1)
 	{
@@ -40,12 +34,12 @@ void FunName(int fd1, int fd2, char **argv)
 	}
 }
 /**
- * insideif - .
- * @fd1: .
- * @fd2: .
- * Return: .
- */
-void insideif(int fd1, int fd2)
+* closse - .
+* @fd1: .
+* @fd2: .
+* Return: .
+*/
+void closse(int fd1, int fd2)
 {
 	if (close(fd2) == -1)
 	{
@@ -57,8 +51,6 @@ void insideif(int fd1, int fd2)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
 		exit(100);
 	}
-	close(fd1);
-	close(fd2);
 }
 /**
  * main - the program
@@ -71,34 +63,23 @@ int main(int argc, char *argv[])
 	int fd1, fd2, buf;
 	char *file_from, *file_to, buffer[1024];
 
-	exit97(argc);
-	file_from = argv[1];
-	file_to = argv[2];
-	fd1 = open(file_from, O_RDONLY);
-	FunName(0, 1, argv);
-	fd2 = open(file_to, O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
-	FunName(1, 0, argv);
-
-	FunName(1, 1, argv);
+	_main(argc, *argv);
 	while ((buf = read(fd1, buffer, 1024)))
 	{
 
 		if ((buf == -1))
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
-			insideif(1, 0);
-			insideif(0, 1);
+			closse(1, 1);
 			exit(98);
 		}
 		if (buf != write(fd2, buffer, buf))
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
-			insideif(1, 0);
-			insideif(0, 1);
+			closse(1, 1);
 			exit(99);
 		}
 	}
-	insideif(1, 0);
-	insideif(0, 1);
+	closse(1, 1);
 	return (0);
 }
