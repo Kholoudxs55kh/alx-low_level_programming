@@ -70,7 +70,7 @@ int main(int argc, char *argv[])
 			closse(fd2);
 			closse(fd1);
 			exit(98);
-	}
+		}
 		if (buf != write(fd2, buffer, buf))
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
@@ -78,6 +78,7 @@ int main(int argc, char *argv[])
 			closse(fd1);
 			exit(99);
 		}
+	}
 	closse(fd2);
 	closse(fd1);
 	return (0);
