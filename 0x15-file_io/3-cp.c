@@ -38,16 +38,11 @@ void _main(int argc, char **argv)
 * @fd2: .
 * Return: .
 */
-void closse(int fd1, int fd2)
+void closse(int fd)
 {
-	if (close(fd2) == -1)
+	if (close(fd) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
-		exit(100);
-	}
-	if (close(fd1) == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 }
@@ -69,20 +64,21 @@ int main(int argc, char *argv[])
 	fd2 = open(file_to, O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 	while ((buf = read(fd1, buffer, 1024)))
 	{
-
 		if ((buf == -1))
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
-			closse(1, 1);
+			closse(fd2);
+			closse(fd1);
 			exit(98);
-		}
+	}
 		if (buf != write(fd2, buffer, buf))
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
-			closse(1, 1);
+			closse(fd2);
+			closse(fd1);
 			exit(99);
 		}
-	}
-	closse(1, 1);
+	closse(fd2);
+	closse(fd1);
 	return (0);
 }
