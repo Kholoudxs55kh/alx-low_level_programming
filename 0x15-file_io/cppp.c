@@ -81,14 +81,12 @@ int main(int argc, char *argv[])
 	return (0);
 }
 /*========================*/
-
-#include "main.h"
 /**
  * exit97 - .
  * @argc: .
  * Return: 0
  */
- int exit97(int argc)
+ void exit97(int argc)
  {
 	if (argc != 3)
 	{
@@ -98,7 +96,7 @@ int main(int argc, char *argv[])
     return (0);    
  }
 
-int FunName(int fd1, int fd2, char **argv)
+void FunName(int fd1, int fd2, char **argv)
 {
     char *file_from, *file_to;
 
@@ -120,7 +118,7 @@ int FunName(int fd1, int fd2, char **argv)
     return (0);
 }
 
-int insideif(int fd1, int fd2)
+void insideif(int fd1, int fd2)
 {
     		if (close(fd2) == -1)
 			{
@@ -180,8 +178,3 @@ int main(int argc, char *argv[])
 
 
 /*=================*/
-int main(int argc, char *argv[])
-{
-	printf("argc:%d, argv:%p\n", argc, (void *)*argv);
-	return (1);
-}
