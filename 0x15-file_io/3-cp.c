@@ -1,10 +1,10 @@
 #include "main.h"
 /**
-* _main - helper func
-*@argc: .
-*@argv: .
-*Return: .
-*/
+ * _main - helper func
+ *@argc: .
+ *@argv: .
+ *Return: .
+ */
 void _main(int argc, char **argv)
 {
 	int fd1, fd2;
@@ -33,11 +33,10 @@ void _main(int argc, char **argv)
 	}
 }
 /**
-* closse - .
-* @fd1: .
-* @fd2: .
-* Return: .
-*/
+ * closse - .
+ * @fd: .
+ * Return: .
+ */
 void closse(int fd)
 {
 	if (close(fd) == -1)
