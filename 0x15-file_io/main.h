@@ -20,6 +20,7 @@ void exit97(int argc);
 void FunName(int fd1, int fd2, char **argv);
 void insideif(int fd1, int fd2);
 void closse(int fd);
+void _main(int argc, char **argv);
 int main(int argc, char *argv[]);
 
 #endif
