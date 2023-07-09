@@ -4,7 +4,7 @@
  * create_new_node - creates a new node
  * @key: the key to the val
  * @value: the value associated to the key
- * Retuen: new node
+ * Return: new node
  */
 hash_node_t *create_new_node(const char *key, const char *value)
 {
@@ -44,12 +44,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	index = key_index((unsigned char *)key, ht->size);
 	node = ht->array[index];
 
-	while(node)
+	while (node)
 	{
 		if (strcmp(node->key, key) == 0)
 		{
 			new_val = strdup(value);
-			if(!new_val)
+			if (!new_val)
 				return (0);
 			free(node->value);
 			node->value = new_val;
